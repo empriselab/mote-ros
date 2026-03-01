@@ -1,3 +1,28 @@
 # mote-ros
 
-ROS drivers for Mote.
+ROS2 drivers for Mote.
+
+## Prerequisites
+
+Install...
+* [Pixi](https://pixi.prefix.dev/latest/installation/#__tabbed_1_1)
+* (optional) [Just](https://just.systems/man/en/introduction.html)
+
+Linux, MacOS, and Windows through WSL2 are supported.
+
+## Running Examples
+If using just, then...
+
+```
+just install
+just ros_shell
+... any ros commands you would like ...
+```
+
+Or, without just...
+
+```
+pixi install
+pixi shell -e kilted
+... any ros commands you would like ...
+```
