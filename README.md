@@ -15,14 +15,14 @@ If using just, then...
 
 ```
 just install
-just ros_shell
-... any ros commands you would like ...
+just shell
+just build
 ```
 
 Or, without just...
 
 ```
 pixi install
-pixi shell -e kilted
-... any ros commands you would like ...
+pixi shell -e jazzy
+pixi run -e jazzy build
 ```

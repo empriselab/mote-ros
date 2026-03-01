@@ -7,6 +7,8 @@ install:
     pixi install
 
 # Activate ROS in the current shell
-ros_shell:
-    pixi shell -e kilted
+shell:
+    pixi shell -e jazzy
 
+build:
+    pixi run -e jazzy build
