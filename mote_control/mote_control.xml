@@ -1,0 +1,9 @@
+<library path="mote_control">
+  <class name="mote_control"
+         type="mote_control::MoteSystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+        Mote is a low cost, high confidence mobile robot optimized for education.
+    </description>
+  </class>
+</library>

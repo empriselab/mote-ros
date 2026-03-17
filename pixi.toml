@@ -64,11 +64,41 @@ ros-humble-desktop = "*"
 channels = ["https://prefix.dev/robostack-jazzy"]
 
 [feature.jazzy.dependencies]
-ros-jazzy-desktop = "*"
+ros-jazzy-ros-base = "*"
+ros-jazzy-ament-cmake = "*"
+ros-jazzy-rclcpp = "*"
+ros-jazzy-controller-manager = "*"
+ros-jazzy-control-toolbox = "*"
+ros-jazzy-hardware-interface = "*"
+ros-jazzy-transmission-interface = "*"
+ros-jazzy-joint-state-broadcaster = "*"
+# mujoco_vendor not available on pixi - MuJoCo provided via pypi mujoco package instead
+ros-jazzy-position-controllers = "*"
+ros-jazzy-robot-state-publisher = "*"
+ros-jazzy-ros2-control-cmake = "*"
+ros-jazzy-sensor-msgs = "*"
+ros-jazzy-std-msgs = "*"
+ros-jazzy-urdfdom = "*"
+ros-jazzy-urdfdom-py = "*"
+ros-jazzy-rviz2 = "*"
+ros-jazzy-launch-testing-ament-cmake = "*"
 
 ### ROS Kilted ####
 [feature.kilted]
 channels = ["https://prefix.dev/robostack-kilted"]
 
 [feature.kilted.dependencies]
-ros-kilted-desktop = "*"
+ros-kilted-ros-base = "*"
+ros-kilted-ament-cmake = "*"
+ros-kilted-rclcpp = "*"
+ros-kilted-controller-manager = "*"
+ros-kilted-hardware-interface = "*"
+ros-kilted-joint-state-broadcaster = "*"
+ros-kilted-ros2-control-cmake = "*"
+ros-kilted-position-controllers = "*"
+ros-kilted-sensor-msgs = "*"
+ros-kilted-urdfdom = "*"
+ros-kilted-urdfdom-py = "*"
+ros-kilted-rviz2 = "*"
+ros-kilted-ros2-control = "*"
+ros-kilted-ros2-controllers = "*"
