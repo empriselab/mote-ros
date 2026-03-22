@@ -40,9 +40,7 @@ libgl-devel = "*"
 # and can be activated using the `pixi run/shell -e <environment>` command.
 [environments]
 noetic = { features = ["noetic", "build"] }
-humble = { features = ["humble", "build"] }
 jazzy = { features = ["jazzy", "build"] }
-kilted = { features = ["kilted", "build"] }
 
 ### ROS Noetic ####
 [feature.noetic]
@@ -51,13 +49,6 @@ channels = ["https://prefix.dev/robostack-noetic"]
 [feature.noetic.dependencies]
 ros-noetic-desktop = "*"
 catkin_tools = "*"
-
-### ROS Humble ####
-[feature.humble]
-channels = ["https://prefix.dev/robostack-humble"]
-
-[feature.humble.dependencies]
-ros-humble-desktop = "*"
 
 ### ROS Jazzy ####
 [feature.jazzy]
@@ -68,13 +59,15 @@ ros-jazzy-ros-base = "*"
 ros-jazzy-ament-cmake = "*"
 ros-jazzy-rclcpp = "*"
 ros-jazzy-controller-manager = "*"
+filelock = "*"
 ros-jazzy-control-toolbox = "*"
 ros-jazzy-hardware-interface = "*"
 ros-jazzy-transmission-interface = "*"
-ros-jazzy-joint-state-broadcaster = "*"
 # mujoco_vendor not available on pixi - MuJoCo provided via pypi mujoco package instead
 ros-jazzy-position-controllers = "*"
 ros-jazzy-robot-state-publisher = "*"
+ros-jazzy-xacro = "*"
+ros-jazzy-ros2controlcli = "*"
 ros-jazzy-ros2-control-cmake = "*"
 ros-jazzy-sensor-msgs = "*"
 ros-jazzy-std-msgs = "*"
@@ -82,23 +75,7 @@ ros-jazzy-urdfdom = "*"
 ros-jazzy-urdfdom-py = "*"
 ros-jazzy-rviz2 = "*"
 ros-jazzy-launch-testing-ament-cmake = "*"
-
-### ROS Kilted ####
-[feature.kilted]
-channels = ["https://prefix.dev/robostack-kilted"]
-
-[feature.kilted.dependencies]
-ros-kilted-ros-base = "*"
-ros-kilted-ament-cmake = "*"
-ros-kilted-rclcpp = "*"
-ros-kilted-controller-manager = "*"
-ros-kilted-hardware-interface = "*"
-ros-kilted-joint-state-broadcaster = "*"
-ros-kilted-ros2-control-cmake = "*"
-ros-kilted-position-controllers = "*"
-ros-kilted-sensor-msgs = "*"
-ros-kilted-urdfdom = "*"
-ros-kilted-urdfdom-py = "*"
-ros-kilted-rviz2 = "*"
-ros-kilted-ros2-control = "*"
-ros-kilted-ros2-controllers = "*"
+ros-jazzy-joint-state-broadcaster = "*"
+ros-jazzy-joint-state-publisher = "*"
+ros-jazzy-joint-state-publisher-gui = "*"
+ros-jazzy-diff-drive-controller = "*"
