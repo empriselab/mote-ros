@@ -2,25 +2,14 @@
 name = "mote"
 description = "Development environment for Mote ROS packages"
 channels = ["https://prefix.dev/conda-forge"]
-platforms = ["linux-64", "win-64", "osx-64", "osx-arm64", "linux-aarch64"]
-
-# This will automatically activate the ros workspace on activation
-[target.win.activation]
-scripts = ["install/setup.bat"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "linux-aarch64"]
 
 [target.unix.activation]
 # For activation scripts, we use bash for Unix-like systems
 scripts = ["install/setup.bash"]
 
-# To build you can use - `pixi run -e <ros distro> build <Any other temporary args>`
-[feature.build.target.win-64.tasks]
-build = "colcon build --merge-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
-
 [feature.build.target.unix.tasks]
 build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
-
-[feature.test.target.win-64.tasks]
-build = "colcon test"
 
 [feature.test.target.unix.tasks]
 build = "colcon test"

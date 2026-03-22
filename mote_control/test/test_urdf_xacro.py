@@ -8,7 +8,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def test_urdf_xacro():
     # General Arguments
-    description_package = "mote_description"
+    description_package = "mote_control"
     description_file = "mote.urdf.xacro"
 
     description_file_path = os.path.join(
