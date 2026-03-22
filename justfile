@@ -15,22 +15,22 @@ build:
 
 test: build
     pixi run -e jazzy colcon test
-    pixi run -e jazzy colcon test-result --all
+    pixi run -e jazzy colcon test-result --all --verbose
 
-# Format C++ files using clang-format
+# Format C++ and Python files
 format:
     pixi run -e jazzy clang-format -i mote_control/src/*.cc mote_control/include/*.h
+    pixi run -e jazzy ruff format mote_control/test
 
-# Check C++ formatting without modifying files
+# Check C++ and Python formatting without modifying files
 format-check:
     pixi run -e jazzy clang-format --dry-run --Werror mote_control/src/*.cc mote_control/include/*.h
+    pixi run -e jazzy ruff format --check mote_control/test
 
-# Lint packages using ament tools
-lint:
-    pixi run -e jazzy ament_cpplint mote_control/src mote_control/include
-    pixi run -e jazzy ament_cppcheck mote_control/src mote_control/include
-    pixi run -e jazzy ament_flake8 mote_control/test
-    pixi run -e jazzy ament_pep257 mote_control/test
+# Lint C++ with clang-tidy and Python with ruff
+lint: build
+    pixi run -e jazzy clang-tidy -p build/mote_control mote_control/src/*.cc
+    pixi run -e jazzy ruff check mote_control/test
 
 ci: format-check lint test
 
@@ -47,21 +47,19 @@ test-system: build-system
     colcon test
     colcon test-result --all
 
-# Format C++ files using the system clang-format installation
+# Format C++ and Python files using the system installation
 format-system:
     clang-format -i mote_control/src/*.cc mote_control/include/*.h
+    ruff format mote_control/test
 
-# Check C++ formatting using the system clang-format installation
+# Check C++ and Python formatting using the system installation
 format-check-system:
     clang-format --dry-run --Werror mote_control/src/*.cc mote_control/include/*.h
+    ruff format --check mote_control/test
 
-# Lint packages using the system ROS installation
-lint-system:
-    #!/usr/bin/env bash
-    source /opt/ros/jazzy/setup.bash
-    ament_cpplint mote_control/src mote_control/include
-    ament_cppcheck mote_control/src mote_control/include
-    ament_flake8 mote_control/test
-    ament_pep257 mote_control/test
+# Lint C++ with clang-tidy and Python with ruff using the system installation
+lint-system: build-system
+    clang-tidy -p build/mote_control mote_control/src/*.cc
+    ruff check mote_control/test
 
 ci-system: format-check-system lint-system test-system

@@ -124,6 +124,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdep-0.26.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/ruff-0.15.7-h7805a7d_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/sysroot_linux-64-2.28-h4ee821c_9.conda
@@ -259,6 +260,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdep-0.26.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/ruff-0.15.7-h9f438e6_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/sysroot_linux-aarch64-2.28-h585391f_9.conda
@@ -392,6 +394,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdep-0.26.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/ruff-0.15.7-h16586dd_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/sdkroot_env_osx-64-26.0-h62b880e_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/sigtool-codesign-0.1.3-hc0f2934_0.conda
@@ -528,6 +531,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdep-0.26.0-pyhd8ed1ab_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/ruff-0.15.7-hc5c3a1d_1.conda
       - conda: https://prefix.dev/conda-forge/noarch/sdkroot_env_osx-arm64-26.0-ha3f98da_7.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/sigtool-codesign-0.1.3-h98dc951_0.conda
@@ -1100,6 +1104,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/linux-64/ruby-3.4.8-h498564d_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-64/ruff-0.15.7-h7805a7d_1.conda
       - conda: https://prefix.dev/conda-forge/linux-64/sdformat14-14.8.0-h5bb51b8_2.conda
       - conda: https://prefix.dev/conda-forge/linux-64/sdformat14-python-14.8.0-py312h22a3d64_2.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
@@ -1711,6 +1716,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/ruby-3.4.8-h3df7994_0.conda
+      - conda: https://prefix.dev/conda-forge/linux-aarch64/ruff-0.15.7-h9f438e6_1.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/sdformat14-14.8.0-hb4dca6f_2.conda
       - conda: https://prefix.dev/conda-forge/linux-aarch64/sdformat14-python-14.8.0-py312he22bb7a_2.conda
       - conda: https://prefix.dev/conda-forge/noarch/setuptools-79.0.1-pyhff2d567_0.conda
@@ -2287,6 +2293,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/osx-64/ruby-3.4.8-h7b6378a_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-64/ruff-0.15.7-h16586dd_1.conda
       - conda: https://prefix.dev/conda-forge/osx-64/sdformat14-14.8.0-h0c172c4_2.conda
       - conda: https://prefix.dev/conda-forge/osx-64/sdformat14-python-14.8.0-py312h6c60994_2.conda
       - conda: https://prefix.dev/conda-forge/noarch/sdkroot_env_osx-64-26.0-h62b880e_7.conda
@@ -2848,6 +2855,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/noarch/rosdistro-1.0.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/noarch/rospkg-1.6.1-pyhd8ed1ab_0.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/ruby-3.4.8-hbf9a790_0.conda
+      - conda: https://prefix.dev/conda-forge/osx-arm64/ruff-0.15.7-hc5c3a1d_1.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/sdformat14-14.8.0-h35eddb6_2.conda
       - conda: https://prefix.dev/conda-forge/osx-arm64/sdformat14-python-14.8.0-py312hb377a67_2.conda
       - conda: https://prefix.dev/conda-forge/noarch/sdkroot_env_osx-arm64-26.0-ha3f98da_7.conda
@@ -35935,6 +35943,59 @@ packages:
   license_family: BSD
   size: 11798937
   timestamp: 1765964668469
+- conda: https://prefix.dev/conda-forge/linux-64/ruff-0.15.7-h7805a7d_1.conda
+  noarch: python
+  sha256: 2985cfff61368323db477c2a0d7f100a57f6cb34aafec51ae96b6fc409d9090f
+  md5: f5678c1a929d9efe3c2397675ae90a3c
+  depends:
+  - python
+  - libgcc >=14
+  - __glibc >=2.17,<3.0.a0
+  constrains:
+  - __glibc >=2.17
+  license: MIT
+  license_family: MIT
+  size: 9220190
+  timestamp: 1774012576023
+- conda: https://prefix.dev/conda-forge/linux-aarch64/ruff-0.15.7-h9f438e6_1.conda
+  noarch: python
+  sha256: 12f3e09ad65e1b90ea9f9364198ceec9181bb812a4b36dece3d7b3f1f9259a84
+  md5: b46ef22af5048a38a3051707e5db6ee1
+  depends:
+  - python
+  - libgcc >=14
+  constrains:
+  - __glibc >=2.17
+  license: MIT
+  license_family: MIT
+  size: 8811982
+  timestamp: 1774012576944
+- conda: https://prefix.dev/conda-forge/osx-64/ruff-0.15.7-h16586dd_1.conda
+  noarch: python
+  sha256: da9d7924d76798615c7919b7b3a77e40f848a89277fe996badb82fdc80d35ae7
+  md5: 21c9b7a026f3f0244ab849aef6970138
+  depends:
+  - python
+  - __osx >=11.0
+  constrains:
+  - __osx >=10.13
+  license: MIT
+  license_family: MIT
+  size: 9184114
+  timestamp: 1774012818963
+- conda: https://prefix.dev/conda-forge/osx-arm64/ruff-0.15.7-hc5c3a1d_1.conda
+  noarch: python
+  sha256: b8e869469607bf00dc80ad920bffe96adc9b21d22e940ffeff71a664d35ef9b7
+  md5: c8590d44f44c1406844b1e10795153e5
+  depends:
+  - python
+  - __osx >=11.0
+  constrains:
+  - __osx >=11.0
+  license: MIT
+  license_family: MIT
+  size: 8432798
+  timestamp: 1774012820989
 - conda: https://prefix.dev/conda-forge/linux-64/sdformat14-14.8.0-h5bb51b8_2.conda
   sha256: ee7c5db752b71cd03442eee21673f20748a30d57651db98fa2acbee1caa037ef
   md5: 4559b2fc2081cddbc0a6b0764664e825

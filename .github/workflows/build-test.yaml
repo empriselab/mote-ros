@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, macos-13]
+        os: [ubuntu-latest, macos-latest]
     steps:
     - uses: actions/checkout@v4
 
@@ -48,10 +48,10 @@ jobs:
           python3-colcon-common-extensions \
           python3-rosdep \
           clang-format \
-          ros-jazzy-ament-cpplint \
-          ros-jazzy-ament-cppcheck \
-          ros-jazzy-ament-flake8 \
-          ros-jazzy-ament-pep257
+          clang-tidy
+
+    - name: Install ruff
+      run: pip install ruff
 
     - name: Initialize rosdep
       run: |
@@ -59,7 +59,7 @@ jobs:
         rosdep update
 
     - name: Install dependencies via rosdep
-      run: rosdep install --from-paths . --ignore-src -r -y
+      run: rosdep install --from-paths . --ignore-src -y --rosdistro jazzy
 
     - name: Install just
       uses: extractions/setup-just@v2

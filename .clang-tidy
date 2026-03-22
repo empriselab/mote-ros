@@ -1,0 +1,8 @@
+Checks: >
+  -*,
+  bugprone-*,
+  google-*,
+  modernize-*,
+  readability-*
+WarningsAsErrors: "*"
+FormatStyle: none

@@ -26,8 +26,9 @@ ninja = "*"
 # ROS specific tools
 rosdep = "*"
 colcon-common-extensions = "*"
-# Formatting
+# Formatting and linting
 clang-tools = "*"
+ruff = "*"
 
 [target.linux.dependencies]
 libgl-devel = "*"
@@ -64,8 +65,3 @@ ros-jazzy-joint-state-broadcaster = "*"
 ros-jazzy-joint-state-publisher = "*"
 ros-jazzy-joint-state-publisher-gui = "*"
 ros-jazzy-diff-drive-controller = "*"
-# Linting
-ros-jazzy-ament-cpplint = "*"
-ros-jazzy-ament-cppcheck = "*"
-ros-jazzy-ament-flake8 = "*"
-ros-jazzy-ament-pep257 = "*"
