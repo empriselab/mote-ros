@@ -26,24 +26,14 @@ ninja = "*"
 # ROS specific tools
 rosdep = "*"
 colcon-common-extensions = "*"
+# Formatting
+clang-tools = "*"
 
 [target.linux.dependencies]
 libgl-devel = "*"
 
-# Define all the different ROS environments
-# Each environment corresponds to a different ROS distribution
-# and can be activated using the `pixi run/shell -e <environment>` command.
 [environments]
-noetic = { features = ["noetic", "build"] }
 jazzy = { features = ["jazzy", "build", "test"] }
-
-### ROS Noetic ####
-[feature.noetic]
-channels = ["https://prefix.dev/robostack-noetic"]
-
-[feature.noetic.dependencies]
-ros-noetic-desktop = "*"
-catkin_tools = "*"
 
 ### ROS Jazzy ####
 [feature.jazzy]
@@ -74,3 +64,8 @@ ros-jazzy-joint-state-broadcaster = "*"
 ros-jazzy-joint-state-publisher = "*"
 ros-jazzy-joint-state-publisher-gui = "*"
 ros-jazzy-diff-drive-controller = "*"
+# Linting
+ros-jazzy-ament-cpplint = "*"
+ros-jazzy-ament-cppcheck = "*"
+ros-jazzy-ament-flake8 = "*"
+ros-jazzy-ament-pep257 = "*"
