@@ -35,28 +35,28 @@ lint:
 ci: format-check lint test
 
 # Build ROS packages using the system ROS installation
-build-apt:
+build-system:
     #!/usr/bin/env bash
     source /opt/ros/jazzy/setup.bash
     colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY
 
 # Test ROS packages using the system ROS installation
-test-apt: build-apt
+test-system: build-system
     #!/usr/bin/env bash
     source /opt/ros/jazzy/setup.bash
     colcon test
     colcon test-result --all
 
 # Format C++ files using the system clang-format installation
-format-apt:
+format-system:
     clang-format -i mote_control/src/*.cc mote_control/include/*.h
 
 # Check C++ formatting using the system clang-format installation
-format-check-apt:
+format-check-system:
     clang-format --dry-run --Werror mote_control/src/*.cc mote_control/include/*.h
 
 # Lint packages using the system ROS installation
-lint-apt:
+lint-system:
     #!/usr/bin/env bash
     source /opt/ros/jazzy/setup.bash
     ament_cpplint mote_control/src mote_control/include
@@ -64,4 +64,4 @@ lint-apt:
     ament_flake8 mote_control/test
     ament_pep257 mote_control/test
 
-ci-apt: format-check-apt lint-apt test-apt
+ci-system: format-check-system lint-system test-system
