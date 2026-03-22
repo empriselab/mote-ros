@@ -2,7 +2,12 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, RegisterEventHandler
 from launch.conditions import IfCondition
 from launch.event_handlers import OnProcessExit
-from launch.substitutions import Command, FindExecutable, PathJoinSubstitution, LaunchConfiguration
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    PathJoinSubstitution,
+    LaunchConfiguration,
+)
 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -21,7 +26,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "use_mock_hardware",
-            default_value="false",
+            default_value="true",
             description="Start robot with mock hardware mirroring command to its states.",
         )
     )
@@ -36,7 +41,7 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                [FindPackageShare("mote_control"), "urdf", "diffbot.urdf.xacro"]
+                [FindPackageShare("mote_control"), "urdf", "mote_description.urdf.xacro"]
             ),
             " ",
             "use_mock_hardware:=",
@@ -53,12 +58,12 @@ def generate_launch_description():
         ]
     )
     rviz_config_file = PathJoinSubstitution(
-        [FindPackageShare("mote_description"), "mote/rviz", "mote.rviz"]
+        [FindPackageShare("mote_description"), "mote/rviz", "mote_view.rviz"]
     )
 
     control_node = Node(
         package="controller_manager",
-        executable="mote_control_node",
+        executable="ros2_control_node",
         parameters=[robot_controllers],
         output="both",
     )
@@ -104,10 +109,12 @@ def generate_launch_description():
     )
 
     # Delay start of robot_controller after `joint_state_broadcaster`
-    delay_robot_controller_spawner_after_joint_state_broadcaster_spawner = RegisterEventHandler(
-        event_handler=OnProcessExit(
-            target_action=joint_state_broadcaster_spawner,
-            on_exit=[robot_controller_spawner],
+    delay_robot_controller_spawner_after_joint_state_broadcaster_spawner = (
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=joint_state_broadcaster_spawner,
+                on_exit=[robot_controller_spawner],
+            )
         )
     )
 

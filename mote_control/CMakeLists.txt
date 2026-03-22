@@ -70,7 +70,7 @@ install(TARGETS mote_control
 
 if(BUILD_TESTING)
   find_package(ament_cmake_pytest REQUIRED)
-  # ament_add_pytest_test(example_2_urdf_xacro test/test_urdf_xacro.py)
+  ament_add_pytest_test(mote_urdf_xacro test/test_urdf_xacro.py)
 
   # Integration (launch) tests
   find_package(ament_cmake_ros REQUIRED)
@@ -79,8 +79,8 @@ if(BUILD_TESTING)
     set(RUNNER "${ament_cmake_ros_DIR}/run_test_isolated.py")
     add_launch_test("${path}" RUNNER "${RUNNER}" ${ARGN})
   endfunction()
-  # add_ros_isolated_launch_test(test/test_view_robot_launch.py)
-  # add_ros_isolated_launch_test(test/test_diffbot_launch.py)
+  add_ros_isolated_launch_test(test/test_view_robot_launch.py)
+  add_ros_isolated_launch_test(test/test_mote_launch.py)
 endif()
 
 ## EXPORTS

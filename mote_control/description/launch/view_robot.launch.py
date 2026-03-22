@@ -1,7 +1,12 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition
-from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import (
+    Command,
+    FindExecutable,
+    LaunchConfiguration,
+    PathJoinSubstitution,
+)
 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -13,7 +18,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_package",
-            default_value="ros2_control_demo_description",
+            default_value="mote_description",
             description="Description package with robot URDF/xacro files. Usually the argument \
         is not set, it enables use of a custom description.",
         )
@@ -21,7 +26,7 @@ def generate_launch_description():
     declared_arguments.append(
         DeclareLaunchArgument(
             "description_file",
-            default_value="diffbot.urdf.xacro",
+            default_value="mote_description.urdf.xacro",
             description="URDF/XACRO description file with the robot.",
         )
     )
