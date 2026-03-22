@@ -41,7 +41,7 @@ def generate_launch_description():
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
             PathJoinSubstitution(
-                [FindPackageShare("mote_control"), "urdf", "mote.urdf.xacro"]
+                [FindPackageShare("mote_control"), "urdf", "mote_description.urdf.xacro"]
             ),
             " ",
             "use_mock_hardware:=",
