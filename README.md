@@ -2,27 +2,26 @@
 
 ROS2 drivers for Mote.
 
-## Prerequisites
+## Using Pixi
 
 Install...
 * [Pixi](https://pixi.prefix.dev/latest/installation/#__tabbed_1_1)
-* (optional) [Just](https://just.systems/man/en/introduction.html)
-
-Linux, MacOS, and Windows through WSL2 are supported.
-
-## Running Examples
-If using just, then...
+* [Just](https://just.systems/man/en/introduction.html)
 
 ```
 just install
 just shell
 just build
+just test
 ```
 
-Or, without just...
+## Using System Jazzy Installation
+
+Install...
+* [Just](https://just.systems/man/en/introduction.html)
 
 ```
-pixi install
-pixi shell -e jazzy
-pixi run -e jazzy build
+just install-system
+just build-system
+just test-system
 ```

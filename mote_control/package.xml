@@ -11,7 +11,7 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>
   <buildtool_depend>git</buildtool_depend>
-  <build_depend>ros2_control_cmake</build_depend>
+  <buildtool_depend>ros2_control_cmake</buildtool_depend>
 
   <depend>backward_ros</depend>
   <depend>control_toolbox</depend>
@@ -29,6 +29,9 @@
 
   <test_depend>ament_cmake_gtest</test_depend>
   <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>robot_state_publisher</test_depend>
+  <test_depend>ros2_controllers</test_depend>
+  <test_depend>xacro</test_depend>
 
   <exec_depend>python3-venv</exec_depend>
   <exec_depend>python3-pip</exec_depend>
