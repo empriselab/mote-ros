@@ -53,16 +53,11 @@ jobs:
     - name: Install ruff
       run: pip install ruff
 
-    - name: Initialize rosdep
-      run: |
-        sudo rosdep init
-        rosdep update
-
-    - name: Install dependencies via rosdep
-      run: rosdep install --from-paths . --ignore-src -y --rosdistro jazzy
-
     - name: Install just
       uses: extractions/setup-just@v2
+
+    - name: Install dependencies
+      run: just install-system
 
     - name: Build and test
       run: just ci-system

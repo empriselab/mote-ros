@@ -34,6 +34,13 @@ lint: build
 
 ci: format-check lint test
 
+# Install dependencies using the system ROS installation
+install-system:
+    #!/usr/bin/env bash
+    sudo rosdep init || true
+    rosdep update --rosdistro jazzy
+    rosdep install --from-paths . --ignore-src -y --rosdistro jazzy
+
 # Build ROS packages using the system ROS installation
 build-system:
     #!/usr/bin/env bash
@@ -44,6 +51,7 @@ build-system:
 test-system: build-system
     #!/usr/bin/env bash
     source /opt/ros/jazzy/setup.bash
+    source install/setup.bash
     colcon test
     colcon test-result --all
 
