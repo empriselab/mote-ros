@@ -1,6 +1,6 @@
 [workspace]
-name = "robostack"
-description = "Development environment for RoboStack ROS packages"
+name = "mote"
+description = "Development environment for Mote ROS packages"
 channels = ["https://prefix.dev/conda-forge"]
 platforms = ["linux-64", "win-64", "osx-64", "osx-arm64", "linux-aarch64"]
 
@@ -18,6 +18,12 @@ build = "colcon build --merge-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMAN
 
 [feature.build.target.unix.tasks]
 build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+
+[feature.test.target.win-64.tasks]
+build = "colcon test"
+
+[feature.test.target.unix.tasks]
+build = "colcon test"
 
 # Dependencies used by all environments
 [dependencies]
@@ -40,7 +46,7 @@ libgl-devel = "*"
 # and can be activated using the `pixi run/shell -e <environment>` command.
 [environments]
 noetic = { features = ["noetic", "build"] }
-jazzy = { features = ["jazzy", "build"] }
+jazzy = { features = ["jazzy", "build", "test"] }
 
 ### ROS Noetic ####
 [feature.noetic]

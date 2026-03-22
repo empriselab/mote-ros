@@ -12,3 +12,6 @@ shell:
 
 build:
     pixi run -e jazzy build
+
+test: build
+    pixi run -e jazzy test
